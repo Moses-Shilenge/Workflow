@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataAccess;
 using BusinessObject.DtoModels;
+using BusinessLogic.Services;
 
 namespace WorklowSolutionTests
 {
@@ -21,13 +22,11 @@ namespace WorklowSolutionTests
                 WorkflowType = "Workflow"
             };
 
-            using (var dbContext = new DataContext())
-            {
-                dbContext.Game.Add(game);
-                dbContext.SaveChanges();
+            IGameService gameService = new GameService();
 
-                Assert.IsNotNull(dbContext.Game.Find(game.Id), "No entry in the DB");
-            }
+            var result = gameService.CreateGame(game);
+
+            Assert.IsNotNull(result, "No entry in the DB");
         }
     }
 }

@@ -24,3 +24,5 @@ C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workf
 C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\WorklowSolutionTests\obj\Debug\WorklowSolutionTests.pdb
 C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\WorklowSolutionTests\bin\Debug\BusinessObject.exe
 C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\WorklowSolutionTests\bin\Debug\BusinessObject.pdb
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\WorklowSolutionTests\bin\Debug\BusinessLogic.exe
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\WorklowSolutionTests\bin\Debug\BusinessLogic.pdb

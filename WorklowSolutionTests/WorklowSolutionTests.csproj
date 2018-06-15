@@ -63,6 +63,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{ad542ab6-b367-4d60-9016-414425631c7c}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
       <Project>{f06dedb5-efb4-41a4-a36d-f61e50364c17}</Project>
       <Name>BusinessObject</Name>
