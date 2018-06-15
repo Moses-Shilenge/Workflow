@@ -1,0 +1,9 @@
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\BusinessObject.exe.config
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\BusinessObject.exe
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\BusinessObject.pdb
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\EntityFramework.dll
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\EntityFramework.xml
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\obj\Debug\BusinessObject.exe
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessObject\obj\Debug\BusinessObject.pdb
