@@ -41,8 +41,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities.DurableInstancing" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,9 +55,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
-    <Compile Include="Migrations\201806150854589_Initial.cs" />
-    <Compile Include="Migrations\201806150854589_Initial.Designer.cs">
-      <DependentUpon>201806150854589_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806190648594_Initial.cs" />
+    <Compile Include="Migrations\201806190648594_Initial.Designer.cs">
+      <DependentUpon>201806190648594_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191139030_AlterGameTable.cs" />
+    <Compile Include="Migrations\201806191139030_AlterGameTable.Designer.cs">
+      <DependentUpon>201806191139030_AlterGameTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191139335_AlterGameTable2.cs" />
+    <Compile Include="Migrations\201806191139335_AlterGameTable2.Designer.cs">
+      <DependentUpon>201806191139335_AlterGameTable2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -64,15 +76,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806150854589_Initial.resx">
-      <DependentUpon>201806150854589_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj">
       <Project>{f06dedb5-efb4-41a4-a36d-f61e50364c17}</Project>
       <Name>BusinessObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806190648594_Initial.resx">
+      <DependentUpon>201806190648594_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191139030_AlterGameTable.resx">
+      <DependentUpon>201806191139030_AlterGameTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191139335_AlterGameTable2.resx">
+      <DependentUpon>201806191139335_AlterGameTable2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

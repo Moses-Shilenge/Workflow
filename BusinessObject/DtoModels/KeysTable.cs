@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
-
 namespace BusinessObject.DtoModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
     [Table("[System.Activities.DurableInstancing].KeysTable")]
-    public class KeysTable
+    public  class KeysTable
     {
         public Guid Id { get; set; }
 

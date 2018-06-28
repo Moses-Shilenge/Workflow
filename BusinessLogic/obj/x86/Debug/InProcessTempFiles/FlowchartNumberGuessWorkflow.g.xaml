@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bm:FlowchartNumberGuessWorkflow xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bd="clr-namespace:BusinessObject.DtoModels;assembly=BusinessObject" xmlns:bm="clr-namespace:BusinessLogic.Main_Workflows;assembly=BusinessLogic" xmlns:local="clr-namespace:BusinessLogic.Sub_Workflows;assembly=BusinessLogic" xmlns:local1="clr-namespace:BusinessLogic.Custom_Activities;assembly=BusinessLogic" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>BusinessObject.DtoModels</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>EntityFramework</AssemblyReference>
+      <AssemblyReference>EntityFramework.SqlServer</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>BusinessObject</AssemblyReference>
+      <AssemblyReference>DataAccess</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>BusinessLogic</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <bm:FlowchartNumberGuessWorkflow.Implementation>
+    <Flowchart>
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="Guess" />
+        <Variable x:TypeArguments="x:Int32" Name="Target" />
+        <Variable x:TypeArguments="bd:Game" Name="Game">
+          <Variable.Default>
+            <mca:CSharpValue x:TypeArguments="bd:Game">null</mca:CSharpValue>
+          </Variable.Default>
+        </Variable>
+        <Variable x:TypeArguments="x:String" Name="Text" />
+        <Variable x:TypeArguments="x:String" Name="variable1" />
+      </Flowchart.Variables>
+      <Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID2">
+          <Assign>
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32">Target</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32">new System.Random().Next(1, MaxNumber + 1)</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID0">
+              <local:Prompt BookmarkName="Game">
+                <local:Prompt.Result>
+                  <OutArgument x:TypeArguments="bd:Game">
+                    <mca:CSharpReference x:TypeArguments="bd:Game">Game</mca:CSharpReference>
+                  </OutArgument>
+                </local:Prompt.Result>
+                <local:Prompt.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">"Please enter a number between 1 and " + MaxNumber</mca:CSharpValue>
+                  </InArgument>
+                </local:Prompt.Text>
+              </local:Prompt>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID3">
+                  <Assign>
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpReference x:TypeArguments="x:Int32">Turns</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpValue x:TypeArguments="x:Int32">Turns + 1</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID4">
+                      <FlowDecision.Condition>
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">Guess == Target</mca:CSharpValue>
+                      </FlowDecision.Condition>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID9">
+                          <Assign>
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String">Text</mca:CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"On point! You've guessed " + Guess + " right \nNumber of times " + Turns</mca:CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID8">
+                              <WriteLine>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String">Text</mca:CSharpValue>
+                                </InArgument>
+                              </WriteLine>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID1">
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="bd:Game">
+                                        <mca:CSharpReference x:TypeArguments="bd:Game">Game</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="bd:Game">
+                                        <mca:CSharpValue x:TypeArguments="bd:Game" xml:space="preserve">new Game()
+            {
+                Id = Game.Id,
+                Guess = Game.Guess,
+                InstanceId = Game.InstanceId,
+                MaxNumber = Game.MaxNumber,
+                Result = Text,
+                Turns = Turns,
+                WorkflowType = Game.WorkflowType
+            }</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID12">
+                                      <local1:SaveGame>
+                                        <local1:SaveGame.Game>
+                                          <InArgument x:TypeArguments="bd:Game">
+                                            <mca:CSharpValue x:TypeArguments="bd:Game">Game</mca:CSharpValue>
+                                          </InArgument>
+                                        </local1:SaveGame.Game>
+                                        <local1:SaveGame.Result>
+                                          <OutArgument x:TypeArguments="bd:Game">
+                                            <mca:CSharpReference x:TypeArguments="bd:Game">Game</mca:CSharpReference>
+                                          </OutArgument>
+                                        </local1:SaveGame.Result>
+                                      </local1:SaveGame>
+                                      <FlowStep.Next>
+                                        <x:Reference>__ReferenceID0</x:Reference>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowDecision x:Name="__ReferenceID5">
+                          <FlowDecision.Condition>
+                            <mca:CSharpValue x:TypeArguments="x:Boolean">Guess &lt; Target</mca:CSharpValue>
+                          </FlowDecision.Condition>
+                          <FlowDecision.True>
+                            <FlowStep x:Name="__ReferenceID10">
+                              <Assign>
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <mca:CSharpReference x:TypeArguments="x:String">Text</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">Your guess is too high</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID6">
+                                  <WriteLine>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String">Text</mca:CSharpValue>
+                                    </InArgument>
+                                  </WriteLine>
+                                  <FlowStep.Next>
+                                    <x:Reference>__ReferenceID1</x:Reference>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.True>
+                          <FlowDecision.False>
+                            <FlowStep x:Name="__ReferenceID11">
+                              <Assign>
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <mca:CSharpReference x:TypeArguments="x:String">Text</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">Your guess is too low</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID7">
+                                  <WriteLine>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String">Text</mca:CSharpValue>
+                                    </InArgument>
+                                  </WriteLine>
+                                  <FlowStep.Next>
+                                    <x:Reference>__ReferenceID1</x:Reference>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.False>
+                        </FlowDecision>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart.StartNode>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <sads:DebugSymbol.Symbol>d5IBQzpcVXNlcnNcTW9zZXNTaGlsZW5nZVxEb2N1bWVudHNcVmlzdWFsIFN0dWRpbyAyMDEzXFByb2plY3RzXFdvcmtmbG93TlRpZXJcV29ya2Zsb3dcQnVzaW5lc3NMb2dpY1xNYWluIFdvcmtmbG93c1xGbG93Y2hhcnROdW1iZXJHdWVzc1dvcmtmbG93LnhhbWwjNwOIAg8CAQE9Cz1MAgECRQlQEgMBnwFTDV4cAwGNAWERbBoCAXxwF3BlAgF0ugEbugFrAgFs2AEd4QEmAgFi5AEh6AEtAgFZiQEhnQEqAgFIoAElqwE3AgE3vgEdxwEmAgEtygEhzgEtAgEkdBl/IgIBE4IBHYYBKQIBCk0PTXYDAagBSA9IWgMBoAFTKFMuAwGeAVsTW4MBAwGWAVYTVlwDAY4BaRdpXQMBhQFkF2RhAgF93wFI3wFdAgFr2wEj2wFtAgFj5gEl5gFnAgFakQEnmgEgAgFRjAEnjAFwAgFJqAErqAF0AgFAowErowFsAgE4xQFIxQFeAgE2wQEjwQFtAgEuzAElzAFnAgElfB98pgECARx3H3dpAgEUhAEhhAFjAgEL</sads:DebugSymbol.Symbol>
+    </Flowchart>
+  </bm:FlowchartNumberGuessWorkflow.Implementation>
+</bm:FlowchartNumberGuessWorkflow>

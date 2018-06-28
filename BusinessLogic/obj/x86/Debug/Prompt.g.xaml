@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bs:Prompt xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bd="clr-namespace:BusinessObject.DtoModels;assembly=BusinessObject" xmlns:bs="clr-namespace:BusinessLogic.Sub_Workflows;assembly=BusinessLogic" xmlns:local="clr-namespace:BusinessLogic.Custom_Activities;assembly=BusinessLogic" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>BusinessObject.DtoModels</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>EntityFramework</AssemblyReference>
+      <AssemblyReference>EntityFramework.SqlServer</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.DataAnnotations</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>BusinessObject</AssemblyReference>
+      <AssemblyReference>DataAccess</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>BusinessLogic</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <bs:Prompt.Implementation>
+    <Sequence>
+      <local:CreateBookmark>
+        <local:CreateBookmark.BookmarkName>
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">BookmarkName</mca:CSharpValue>
+          </InArgument>
+        </local:CreateBookmark.BookmarkName>
+        <local:CreateBookmark.Result>
+          <OutArgument x:TypeArguments="bd:Game">
+            <mca:CSharpReference x:TypeArguments="bd:Game">Result</mca:CSharpReference>
+          </OutArgument>
+        </local:CreateBookmark.Result>
+      </local:CreateBookmark>
+      <WriteLine>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">Text</mca:CSharpValue>
+        </InArgument>
+      </WriteLine>
+      <sads:DebugSymbol.Symbol>9xAA6mk7VfyodgZ9tH/vTS1ye0M6XFVzZXJzXE1vc2VzU2hpbGVuZ2VcRG9jdW1lbnRzXFZpc3VhbCBTdHVkaW8gMjAxM1xQcm9qZWN0c1xXb3JrZmxvd05UaWVyXFdvcmtmbG93XEJ1c2luZXNzTG9naWNcU3ViIFdvcmtmbG93c1xQcm9tcHQueGFtbAY2A0kOAgEBNwVCHAIBB0MFRxECAQI6CzpVAgEMPws/VgIBCEUJRUsCAQM=</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </bs:Prompt.Implementation>
+</bs:Prompt>

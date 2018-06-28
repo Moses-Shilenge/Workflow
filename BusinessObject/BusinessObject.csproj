@@ -50,17 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DtoModels\DefinitionIdentityTable.cs" />
     <Compile Include="DtoModels\Game.cs" />
     <Compile Include="DtoModels\IdentityOwnerTable.cs" />
-    <Compile Include="DtoModels\Instance.cs" />
     <Compile Include="DtoModels\InstanceMetadataChangesTable.cs" />
+    <Compile Include="DtoModels\InstancePromotedProperties.cs" />
     <Compile Include="DtoModels\InstancePromotedPropertiesTable.cs" />
-    <Compile Include="DtoModels\InstancePromotedProperty.cs" />
+    <Compile Include="DtoModels\Instances.cs" />
     <Compile Include="DtoModels\InstancesTable.cs" />
     <Compile Include="DtoModels\KeysTable.cs" />
     <Compile Include="DtoModels\LockOwnersTable.cs" />
     <Compile Include="DtoModels\RunnableInstancesTable.cs" />
-    <Compile Include="DtoModels\ServiceDeployment.cs" />
+    <Compile Include="DtoModels\ServiceDeployments.cs" />
     <Compile Include="DtoModels\ServiceDeploymentsTable.cs" />
     <Compile Include="DtoModels\SqlWorkflowInstanceStoreVersionTable.cs" />
     <Compile Include="Program.cs" />

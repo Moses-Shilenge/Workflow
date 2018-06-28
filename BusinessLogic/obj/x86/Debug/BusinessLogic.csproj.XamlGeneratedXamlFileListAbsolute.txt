@@ -1,0 +1,4 @@
+obj\x86\Debug\FlowchartNumberGuessWorkflow.g.xaml
+obj\x86\Debug\Prompt.g.xaml
+obj\x86\Debug\BusinessLogic.Main_Workflows_FlowchartNumberGuessWorkflow_BeforeInitializeComponentHelper.txt
+obj\x86\Debug\BusinessLogic.Sub_Workflows_Prompt_BeforeInitializeComponentHelper.txt

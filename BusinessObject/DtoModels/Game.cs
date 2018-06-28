@@ -13,11 +13,12 @@ namespace BusinessObject.DtoModels
     {
         [Key]
         public Guid Id { get; set; }
-        public Instance InstanceId { get; set; }
+        public Guid InstanceId { get; set; }
         public int MaxNumber { get; set; }
         public string WorkflowType { get; set; }
         public int Guess { get; set; }
         public string Result { get; set; }
         public int Turns { get; set; }
+        public int RandomNumber { get; set; }
     }
 }

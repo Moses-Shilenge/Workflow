@@ -13,5 +13,6 @@ namespace BusinessLogic.Services
         Game UpdateGame(Game game);
         void DeleteGame(Guid game);
         Game GetGame(Guid game);
+        List<InstancesTable> GetInstances();
     }
 }

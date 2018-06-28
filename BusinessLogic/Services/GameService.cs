@@ -1,4 +1,5 @@
-﻿using DataAccess;
+﻿using BusinessObject.DtoModels;
+using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace BusinessLogic.Services
             }
         }
 
-        public BusinessObject.DtoModels.Game UpdateGame(BusinessObject.DtoModels.Game newGame)
+        public BusinessObject.DtoModels.Game UpdateGame(Game newGame)
         {
             using (var dbContext = new DataContext())
             {
@@ -42,15 +43,28 @@ namespace BusinessLogic.Services
         {
             using (var dbContext = new DataContext())
             {
+
             }
         }
 
-        public BusinessObject.DtoModels.Game GetGame(Guid game)
+        public BusinessObject.DtoModels.Game GetGame(Guid id)
         {
             using (var dbContext = new DataContext())
             {
-                return null;
+                return dbContext.Game.Find(id);
             }
         }
+        
+        #region
+        
+        public List<InstancesTable> GetInstances()
+        {
+            using (var dbContext = new DataContext())
+            {
+                return dbContext.InstancesTable.ToList();
+            }
+        }
+
+        #endregion
     }
 }

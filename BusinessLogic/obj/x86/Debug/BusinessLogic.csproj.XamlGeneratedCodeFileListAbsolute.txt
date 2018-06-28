@@ -1,0 +1,7 @@
+obj\x86\Debug\_BusinessLogic.g.cs
+obj\x86\Debug\FlowchartNumberGuessWorkflow.g.cs
+obj\x86\Debug\Prompt.g.cs
+obj\x86\Debug\BusinessLogic.Main_Workflows_FlowchartNumberGuessWorkflow_BeforeInitializeComponentHelper.cs
+obj\x86\Debug\BusinessLogic.Sub_Workflows_Prompt_BeforeInitializeComponentHelper.cs
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessLogic\obj\x86\Debug\BusinessLogic.Main_Workflows_FlowchartNumberGuessWorkflow_CompiledExpressionRoot.cs
+C:\Users\MosesShilenge\Documents\Visual Studio 2013\Projects\WorkflowNTier\Workflow\BusinessLogic\obj\x86\Debug\BusinessLogic.Sub_Workflows_Prompt_CompiledExpressionRoot.cs

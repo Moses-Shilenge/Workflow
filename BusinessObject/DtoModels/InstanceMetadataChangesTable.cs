@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
-
 namespace BusinessObject.DtoModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
     [Table("[System.Activities.DurableInstancing].InstanceMetadataChangesTable")]
-    public class InstanceMetadataChangesTable
+    public  class InstanceMetadataChangesTable
     {
         [Key]
         [Column(Order = 0)]
